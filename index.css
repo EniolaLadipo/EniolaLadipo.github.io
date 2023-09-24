@@ -1,0 +1,186 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Arial',sans-serif;
+    margin: 0;
+}
+
+/* The header section */
+
+#header{
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(33, 32, 32);
+}
+
+#header h1{
+    overflow: hidden;
+    border-right: .15em solid rgb(0, 94, 255);
+    white-space: nowrap;
+    margin: 0 auto;
+    color: white;
+    font-size: 4em;
+    animation:
+        typing 4s steps(40, end),
+        blink-caret .8s step-end infinite;
+}
+
+/* Configurations for header animation */
+@keyframes typing {
+    from {width: 0}
+    to {width: 100%}
+}
+
+@keyframes blink-caret{
+    from, to {border-color: transparent}
+    50% {border-color: rgb(0, 94, 255)}
+}
+
+/* Navigation bar section */
+.navbar{
+    display: flex;
+    background-color: black;
+}
+
+.navbar li{
+    float: left;
+    padding: 8px 15px;
+    margin-right: 20px;
+}
+
+.navbar a{
+    font-size: 20px;
+    text-decoration: none;
+    padding: 6px 10px;
+    color: white;
+    display: inline-block;
+    position: relative;
+    font-size: 1.55em;
+}
+
+.navbar a:hover{
+    color: rgb(36, 119, 252);
+}
+
+.navbar a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    border-radius: 45px;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background-color: blue;
+    transform-origin: bottom right;
+    transition: transform 0.4s ease-out;
+}
+
+.navbar a:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+/* Main info section */
+.main{
+    height: 113vh;
+}
+
+.main h2{
+    border-bottom: 2px solid rgb(172, 172, 172);
+    padding: 20px 0px 15px 10px;
+    font-size: 1.7em;
+}
+
+.main p{
+    padding: 5px 0px 0px 10px;
+    font-size: 1.05em;
+}
+
+.left, .right{
+    padding: 20px 10px 10px 20px;
+}
+
+.left{
+    float: left;
+    width: 37%;
+    background-color: rgb(213, 211, 211);
+    height: 100%;
+}
+
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.image img{
+    width: 67%;
+    height: 60%;
+}
+
+.email{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.email a{
+    font-size: 18px;
+}
+
+.email i{
+    font-size: 22px;
+}
+
+.right{
+    margin-left: 39%;
+    height: 100%;
+}
+
+.facts li{
+    margin: 20px 0px 25px 0px;
+    padding-left: 10px;
+    font-size: 1.05em;
+}
+
+.toolbox{
+    list-style: none;
+    margin-top: 15px;
+}
+
+.toolbox li{
+    padding: 10px 20px;
+    float: left;
+    margin: 3px;
+    font-size: 1.1em;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(7, 100px);
+    grid-template-rows: repeat(2, 45px);
+    margin-left: 20px;
+}
+
+.grid-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon img{
+    width: 45px;
+    height: 45px;
+}
+
+.name{
+    text-align: center;
+    font-size: 1.05em;
+}
+
