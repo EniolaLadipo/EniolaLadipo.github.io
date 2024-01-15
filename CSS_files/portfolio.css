@@ -79,26 +79,19 @@ body{
     transform-origin: bottom left;
 }
 
-.container{
-    margin: auto;
+.grid-container{
     display: grid;
-    grid-template-columns: auto auto auto;
-    width: 75vw;
-    height: 50vh;
-    border: 1px solid black;
+    grid-template-columns: 1fr; /* One column */
+    grid-template-rows: auto auto auto; /* Three rows */
+    gap: 10px; /* Gap between rows (optional) */
+    width: 50%;
+    margin: auto;
 }
-
-.item{
-    border: 1px solid black;
-    margin: 10px;
-    flex-grow: 1;
-    flex-basis: 200;
-    height: 100px;
+  
+.grid-item{
+    border: 1px solid black; /* Border for visualization */
+    padding: 10px;
+    text-align: center;
+    height: 40vh;
 }
-
-.top, .bottom{
-    border: 1px solid black;
-    height: 51%;
-}
-
-
+  
